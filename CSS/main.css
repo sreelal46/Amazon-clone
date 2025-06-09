@@ -1,0 +1,527 @@
+/* main part */
+
+.main-part {
+  position: relative;
+}
+
+.bg-container {
+  position: relative;
+  height: 550px;
+  overflow: hidden;
+}
+
+/* Create two layers using pseudo-elements */
+.bg-container::before,
+.bg-container::after {
+  background-image: url(../Image/slide-img-2.jpg);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.bg-container::before {
+  opacity: 1;
+  z-index: 1;
+}
+
+.bg-container::after {
+  opacity: 0;
+  z-index: 2;
+}
+
+/* This adds the dark bottom shade */
+.gradient::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Adjust this value for more or less shading */
+  background: linear-gradient(
+    to top,
+    rgba(245, 245, 245, 10),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* cards */
+
+.card-container {
+  z-index: 2;
+  position: absolute;
+  top: 350px;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-top: -20px;
+  width: 1500px;
+}
+
+.card-align {
+  margin: 20px;
+  margin-right: -20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 0px;
+  row-gap: 60px;
+}
+
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  height: 390px;
+  width: 300px;
+  padding: 15px;
+  margin-right: 52px;
+}
+.card-heading {
+  align-items: baseline;
+  height: 60px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.image-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 35px;
+}
+.card-1-img-1 {
+  height: 90px;
+  width: 140px;
+}
+.card-1-img-2 {
+  height: 90px;
+  width: 140px;
+  margin-left: -0px;
+}
+.card-1-img-3 {
+  height: 90px;
+  width: 140px;
+}
+
+.card-1-img-4 {
+  height: 90px;
+  width: 140px;
+  margin-left: -0px;
+}
+
+.card-image {
+  font-size: 11.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: 550;
+}
+.card-image:hover {
+  cursor: pointer;
+}
+
+.card-heading-1 {
+  color: #3d3de6;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.card-heading-1:hover {
+  color: rgb(137, 137, 137);
+  cursor: pointer;
+}
+
+/* card 2 */
+
+.card-2 {
+  margin-top: 630px;
+  margin-left: 15px;
+  margin-right: 8px;
+  background-color: rgb(255, 255, 255);
+  height: 300px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-2-head-container {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-2-heading {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.card-2-see-all {
+  color: #3d3de6;
+  margin-top: 22px;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.card-2-see-all:hover {
+  color: rgb(137, 137, 137);
+  cursor: pointer;
+}
+
+.card-2-img-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.card-2-img-container:hover {
+  cursor: pointer;
+}
+
+.card-3 {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 8px;
+  background-color: #ffffff;
+  height: 300px;
+}
+
+/* section 2 */
+
+.card-4 {
+  margin-top: 30px;
+  /* margin-left: 15px;
+  margin-right: 8px; */
+  /* background-color: #e16b6b; */
+  /* height: 300px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  column-gap: 80px;
+}
+
+/* sub card 1 */
+.subCard-1 {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  height: 390px;
+  width: 300px;
+}
+.subCard-1-container {
+  padding: 10px;
+}
+
+.subCard-1-heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.subCard-1-img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  background-color: #ffffff;
+
+  align-items: center;
+}
+
+.subCard-1-img {
+  margin-left: 20px;
+}
+
+.subCard-1-img-container img {
+  margin-left: 30px;
+}
+.subCard-1-img {
+  margin-bottom: 10px;
+}
+.subCard-1-img img,
+p:hover {
+  cursor: pointer;
+}
+
+.subCard-1-description {
+  font-size: 10px;
+}
+
+.subCard-1-price {
+  vertical-align: top;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.subCard-1-price sup {
+  font-size: 12px;
+  vertical-align: top;
+  margin-left: 2px;
+}
+
+.subCard-1-seeMore {
+  margin-top: 15px;
+  color: #3d3de6;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.subCard-1-seeMore:hover {
+  color: rgb(137, 137, 137);
+  cursor: pointer;
+}
+
+/* sub card 2 */
+
+.subCard-2 {
+  background-color: #ffffff;
+  height: 390px;
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+}
+
+.subCard-2-heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.subCard-2-details {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.subCard-2-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subCard-2-img:hover {
+  cursor: pointer;
+}
+
+.subCard-2-price-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.subCard-2-mrp {
+  margin-left: 10px;
+}
+
+.subCard-2-price {
+  vertical-align: top;
+  display: flex;
+}
+
+.subCard-2-price-text {
+  vertical-align: top;
+  font-size: 10px;
+}
+.subCard-2-button-container {
+  margin-left: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+}
+.subCard-2-buttons {
+  height: 50px;
+  width: 50px;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: #9da2a9;
+  border-style: solid;
+}
+
+.subCard-2-buttons:hover {
+  cursor: pointer;
+  border-color: #3d3de6;
+  border-width: 1px;
+}
+.subCard-2-buttons:focus {
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.subCard-2-buttons-img {
+  height: 45px;
+  width: 45px;
+  margin-left: -4.5px;
+  border-radius: 4px;
+}
+
+.subCard-3-img {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subCard-3-seeMore {
+  margin-top: 35px;
+  color: #3d3de6;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.subCard-3-seeMore:hover {
+  color: rgb(137, 137, 137);
+  cursor: pointer;
+}
+
+.subCard-3-imgs {
+  height: 210px;
+}
+
+.subCard-3-imgs:hover {
+  cursor: pointer;
+}
+
+.card-5 {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 8px;
+  background-color: #ffffff;
+  height: 300px;
+}
+
+.card-6 {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 8px;
+  background-color: #ffffff;
+  height: 300px;
+}
+
+.card-7 {
+  margin-top: 30px;
+  margin-left: -5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.card-7-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  column-gap: 82px;
+}
+.card-7-subCard-1-img img {
+  padding: 10px;
+  margin-right: 10px;
+  height: 95px;
+}
+
+.card-7-subCard-1-img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  background-color: #ffffff;
+
+  align-items: center;
+}
+
+.card-7-subCard-1-seeMore {
+  margin-top: 25px;
+  color: #3d3de6;
+  font-weight: 500;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.card-7-subCard-1-seeMore:hover {
+  color: rgb(137, 137, 137);
+  cursor: pointer;
+}
+
+.card-7-subCard-1-img img:hover {
+  cursor: pointer;
+}
+
+.card-8 {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 8px;
+  background-color: #ffffff;
+  height: 300px;
+}
+
+.card-9 {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 8px;
+}
+
+.card-9-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  column-gap: 55px;
+  padding: 0px;
+  margin-left: -20px;
+  margin-right: -8px;
+}
+
+/* recommendation */
+
+.recommendation {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 8px;
+  background-color: #ffffff;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #9da2a9;
+}
+
+.recommendations-heading {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sign-in-button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px 180px 10px 180px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: rgb(255, 195, 54);
+  font-size: 15px;
+  font-weight: 400px;
+}
+
+.new-customer {
+  font-weight: 400;
+}
+.underline {
+  color: #9da2a9;
+}
+
+.underline:hover {
+  cursor: pointer;
+  color: #3d3de6;
+}
